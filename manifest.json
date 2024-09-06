@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT for Gmail and Google Docs",
+    "version": "0.1",
+    "permissions": [
+      "storage",
+      "identity",
+      "activeTab",
+      "scripting",
+      "https://mail.google.com/",
+      "https://docs.google.com/"
+    ],
+    "action": {
+      "default_popup": "options.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://mail.google.com/*",
+          "https://docs.google.com/*"
+        ],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "oauth2": {
+      "client_id": "<your_client_id>",
+      "scopes": ["identity", "profile", "https://mail.google.com/", "https://docs.google.com/"]
+    }
+  }
