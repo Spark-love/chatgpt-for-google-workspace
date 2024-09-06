@@ -1,0 +1,22 @@
+/* Styles for Gmail button */
+button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Styles for Google Docs widget */
+  #chatgpt-prompt {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  #chatgpt-generate {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
